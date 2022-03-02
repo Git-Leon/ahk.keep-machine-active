@@ -1,0 +1,15 @@
+#SingleInstance Force
+
+^F3::
+	; IfWinNotActive, Chrome, , WinWaitActive, Chrome
+	Loop {
+		Sleep, 75		
+		text=%Clipboard%
+		Send  {PrintScreen}
+		Clipboard = %text%
+		Sleep, 1000 * 60 * 4
+	}
+	
+
+^+F3::
+	run AutoHotkey.exe flubber.ahk ; create newzoom
