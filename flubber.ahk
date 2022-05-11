@@ -1,7 +1,11 @@
 #SingleInstance Force
 
 ^F3::
-	Loop {
+	Loop {	
+		if (A_hour >= 17) {
+			break
+		}
+		
 		text=%Clipboard%
 		Send  {PrintScreen}
 		Clipboard = %text%
