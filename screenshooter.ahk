@@ -2,9 +2,6 @@
 
 ^F3::
 	Loop {	
-		if (A_hour >= 17) {
-			break
-		}
 		
 		text=%Clipboard%
 		Send  {PrintScreen}
